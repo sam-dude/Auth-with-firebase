@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.App{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+.signup, .Login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid #888;
+    padding:5rem 6rem;
+    border-radius: 10px;
+    width: 500px;
+}
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+}
+form>h2{
+    font-size: 26px;
+}
+form>.sub-title{
+    padding-bottom: 18px;
+}
+form input{
+    border: none;
+    border-bottom: 1px solid #888;
+    outline: none;
+    margin: 5px 0;
+    font-size: 18px;
+}
+form label{
+    font-size: 18px;
+}
+form button, button{
+    background-color: transparent;
+    font-size: 18px;
+    padding: .4rem;
+    outline: none;
+    border: 1px solid #000;
+    margin: .3rem 0;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 300px;
+}
+form .c-btn{
+    background-color: #000;
+    color: #fff;
+}
+form .c-btn:disabled{
+    background-color: #888;
+}
+
+@keyframes tweak {
+    0%{
+        padding:9rem 3rem;  
+    }
+    100%{
+        padding: 3rem 9rem;
+    }
+}
