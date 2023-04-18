@@ -9,7 +9,7 @@ const Signup = () => {
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
     const [error, setError] = useState("");
-    const { signUp } = useUserAuth();
+    const { signUp, googleSignIn } = useUserAuth();
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
@@ -19,6 +19,17 @@ const Signup = () => {
             await signUp(email, password);
             navigate("/")
         }catch (err){
+            setError(err.message)
+        }
+    }
+
+    const handleGoogleSignIn = async (e) =>{
+        e.preventDefault();
+
+        try{
+            await googleSignIn();
+            navigate("/home");
+        }catch(err){
             setError(err.message)
         }
     }
@@ -56,7 +67,7 @@ const Signup = () => {
                 />
 
                 <button className="btn c-btn" onClick={handleSubmit}>Create Account</button>
-                <button className="btn">Sign up with Google</button>
+                <button type="submit" className="btn" onClick={handleGoogleSignIn}>Continue with Google</button>
             </form>
             <p>Already a user? <Link to='/'>Login</Link></p>
         </div>
