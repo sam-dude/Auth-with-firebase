@@ -9,6 +9,7 @@
     width: 100vw;
     align-items: center;
     justify-content: center;
+    background-color: #eee;
 }
 .signup, .Login{
     display: flex;
@@ -20,6 +21,10 @@
     border-radius: 10px;
     width: 500px;
 }
+.signup>h2, .Login>h2{
+    font-weight: 600;
+    padding-bottom: 8px;
+}
 form {
     display: flex;
     justify-content: center;
@@ -29,13 +34,15 @@ form {
 form>h2{
     font-size: 26px;
 }
-form>.sub-title{
+.sub-title{
     padding-bottom: 18px;
 }
 form input{
+    background-color: #fff;
+    padding: 14px;
     border: none;
-    border-bottom: 1px solid #888;
-    outline: none;
+    font-size: 18px;
+    border-radius: 10px;
     margin: 5px 0;
     font-size: 18px;
 }
@@ -52,6 +59,7 @@ form button, button{
     border-radius: 20px;
     cursor: pointer;
     width: 300px;
+    font-weight: normal !important;
 }
 form .c-btn{
     background-color: #000;
@@ -67,5 +75,97 @@ form .c-btn:disabled{
     }
     100%{
         padding: 3rem 9rem;
+    }
+}
+
+.Board{
+    height: 90%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px #fff solid;
+    border-radius: 20px;
+}
+.Board .cta{
+    display: flex;
+    justify-content: center;
+    border: 1px solid #fff;
+    width: fit-content;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.Board .top img{
+    width: 100%;
+    border-radius: 20px;
+    height: 100%;
+}
+.Board .top{
+    width: 100%;
+    height: 100%;
+    padding: 1px;
+}
+.Board .cta>a{
+    text-decoration: none;
+    color: #000;
+}
+.Board>.bottom{
+    width: 100%;
+}
+.Board>.bottom h2{
+    font-size: 32px;
+    padding-bottom: 32px;
+}
+.Board>.bottom p{
+    padding-bottom: 64px;
+}
+.Board .cta>.b-btn:first-of-type{
+    background-color: #fff;
+}
+.Board .ct {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+.b-btn{
+    padding: 14px 42px;
+    font-size: 18px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .Board, .signup, .Login{
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        border: none;
+        padding:0;
+    }
+    .Board .top{
+        height: 50%;
+        display: none;
+    }
+    .Board>.bottom h2{
+        font-size: 28px;
+        padding: 32px 0;
+    }
+    
+
+}
+@media (max-width: 1028px) and (min-width: 768px) {
+    .Board{
+        flex-direction: column;
+    }
+    .Board .top{
+        height: 50%;
+        display: none;
+    }
+    .Board>.bottom h2{
+        font-size: 28px;
+        padding: 32px 0;
     }
 }

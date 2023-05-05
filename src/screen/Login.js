@@ -33,24 +33,25 @@ const Login = () => {
     }
     return (
         <div className="Login">
-                <h2>Login</h2>
-                <p className="sub-title">Login to get started</p>
+                <h2>Hello Again!</h2>
+                <p className="sub-title">Welcome back you've been missed</p>
                 {error && <p style={{color: 'red'}}>{error}</p>}
             <form onSubmit={handleSubmit}>
                 
-                <label htmlFor="email " >Email</label>
-                <input type="email" name="email" value={email} onChange={ (e) => setEmail(e.target.value)}/>
-                <label htmlFor="Password" >Password</label>
-                <input type="password" name="Password" onChange={ (e) => setPassword(e.target.value)}/>
-                <button className="btn c-btn" type="submit">Login</button>
+                
+                <input type="email" name="email" value={email} onChange={ (e) => setEmail(e.target.value)} placeholder="Enter email"/>
+                
+                <input type="password" name="Password" onChange={ (e) => setPassword(e.target.value)} placeholder="Password"/>
+                <Link to='/resetpassword' style={{textAlign: 'end', textDecoration: 'none', color: '#000', padding: '14px 0'}}>Recovery Password</Link>
+                <button className="b-btn c-btn" type="submit">Sign In</button>
                 
             </form>
             
             <div>
-            <button type="submit" className="btn" onClick={handleGoogleSignIn}>Continue with Google</button>
+            <button type="submit" className="b-btn btn" onClick={handleGoogleSignIn}>Continue with Google</button>
             </div>
             
-            <p>Or don't have an account? <Link to='/signup'>Sign up</Link> <br /><Link to='/resetpassword'>Forgotten password</Link></p>
+            <p>Not a member?<Link to='/signup'>Register now</Link></p>
         </div>
     );
 }

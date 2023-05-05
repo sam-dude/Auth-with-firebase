@@ -6,6 +6,7 @@ import { UserAuthContextProvider } from './context/UserAuthContext';
 import Home from './screen/Home';
 import ProtectedRoute from './components/ProtectedRoute';
 import ResetPassword from './screen/ResetPassword';
+import Board from './screen/Board';
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
       <div className="App">
         <UserAuthContextProvider>
         <Routes>
-          <Route path='/' element={<Login />}/>
+          <Route path='/login' element={<Login />}/>
           <Route path='/signup' element={<Signup />}/>
           <Route path='/resetpassword' element={<ResetPassword />} />
           <Route 
@@ -24,6 +25,7 @@ function App() {
             <Home />
           </ProtectedRoute>}
           />
+          <Route path='/' element={<Board />}/>
         </Routes>
         </UserAuthContextProvider>
       </div>

@@ -66,10 +66,10 @@ const Signup = () => {
                 onChange={event => setPassword(event.target.value)}
                 />
 
-                <button className="btn c-btn" onClick={handleSubmit}>Create Account</button>
-                <button type="submit" className="btn" onClick={handleGoogleSignIn}>Continue with Google</button>
+                <button className="b-btn c-btn" onClick={handleSubmit}>Create Account</button>
+                <button type="submit" className="b-btn" onClick={handleGoogleSignIn}>Continue with Google</button>
             </form>
-            <p>Already a user? <Link to='/'>Login</Link></p>
+            <p>Already a user? <Link to='/login'>Login</Link></p>
         </div>
     );
 }
