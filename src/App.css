@@ -140,20 +140,23 @@ form .c-btn:disabled{
 @media (max-width: 768px) {
     .Board, .signup, .Login{
         flex-direction: column;
-        height: 100%;
+        height: 100vh;
         width: 100%;
         border: none;
         padding:0;
     }
     .Board .top{
         height: 50%;
-        display: none;
+        display: block;
+        padding: 8px;
     }
     .Board>.bottom h2{
         font-size: 28px;
         padding: 32px 0;
     }
-    
+    .Board>.bottom{
+        height: 50%;
+    }
 
 }
 @media (max-width: 1028px) and (min-width: 768px) {

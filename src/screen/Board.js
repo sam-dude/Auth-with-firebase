@@ -1,5 +1,5 @@
 import { Link  } from "react-router-dom";
-import BoardImg from '../Assets/first-landing.jpg'
+import BoardImg from '../Assets/board.jpg'
 
 const Board = () => {
     return (
