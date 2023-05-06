@@ -34,7 +34,7 @@ const Login = () => {
     return (
         <div className="Login">
                 <h2>Hello Again!</h2>
-                <p className="sub-title">Welcome back you've been missed</p>
+                <p className="sub-title">Welcome back you've <br />been missed</p>
                 {error && <p style={{color: 'red'}}>{error}</p>}
             <form onSubmit={handleSubmit}>
                 
