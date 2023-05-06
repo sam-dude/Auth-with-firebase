@@ -169,14 +169,17 @@ form .c-btn:disabled{
     }
     .Board .ct{
         width: 100%;
-        padding: 8px;
+        padding: 8%;
     }
     .Board .cta{
         width: 100%;
     }
     .Board .cta>.b-btn{
         width: 100%;
-
+        padding-left: 0;
+        padding-right: 0;
+        padding: auto;
+        text-align: center;
     }
 
 }
