@@ -25,7 +25,6 @@ const Signup = () => {
 
     const handleGoogleSignIn = async (e) =>{
         e.preventDefault();
-
         try{
             await googleSignIn();
             navigate("/home");
@@ -42,32 +41,32 @@ const Signup = () => {
             <form action="">
                 <p className="sub-title">Set up your account in less than a minute.</p>
 
-                <label htmlFor="name">Name</label>
                 <input 
                 type="text" 
                 name="name" 
                 value={name}
                 onChange={event => setName(event.target.value)}
+                placeholder="Name "
                 />
 
-                <label htmlFor="email ">Email</label>
                 <input 
                 type="email" 
                 name="email"
                 value={email}
                 onChange={event => setEmail(event.target.value)}
+                placeholder="Email"
                 />
 
-                <label htmlFor="Password">Password</label>
                 <input 
                 type="password" 
                 name="Password"
                 value={password}
                 onChange={event => setPassword(event.target.value)}
+                placeholder="Password"
                 />
 
                 <button className="b-btn c-btn" onClick={handleSubmit}>Create Account</button>
-                <button type="submit" className="b-btn" onClick={handleGoogleSignIn}>Continue with Google</button>
+                <button type="submit" className="b-btn g-btn" onClick={handleGoogleSignIn} >Continue with Google</button>
             </form>
             <p>Already a user? <Link to='/login'>Login</Link></p>
         </div>

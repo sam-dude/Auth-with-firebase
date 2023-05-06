@@ -63,8 +63,9 @@ form button, button{
     font-weight: normal !important;
 }
 form .c-btn{
-    background-color: #000;
+    background-color: #884ef3;
     color: #fff;
+    border: none !important;
 }
 form .c-btn:disabled{
     background-color: #888;
@@ -137,7 +138,15 @@ form .c-btn:disabled{
     border-radius: 10px;
     font-weight: 600;
 }
-
+.g-btn{
+    background-color: transparent;
+    border: 1px solid #fff;
+    transition: .3s;
+}
+.g-btn:hover{
+    background-color: #fff;
+    border: none;
+}
 @media (max-width: 768px) {
     .Board, .signup, .Login{
         flex-direction: column;
@@ -157,6 +166,17 @@ form .c-btn:disabled{
     }
     .Board>.bottom{
         height: 50%;
+    }
+    .Board .ct{
+        width: 100%;
+        padding: 8px;
+    }
+    .Board .cta{
+        width: 100%;
+    }
+    .Board .cta>.b-btn{
+        width: 100%;
+
     }
 
 }

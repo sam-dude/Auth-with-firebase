@@ -48,7 +48,7 @@ const Login = () => {
             </form>
             
             <div>
-            <button type="submit" className="b-btn btn" onClick={handleGoogleSignIn}>Continue with Google</button>
+            <button type="submit" className="b-btn btn g-btn" onClick={handleGoogleSignIn}>Continue with Google</button>
             </div>
             
             <p>Not a member?<Link to='/signup'>Register now</Link></p>

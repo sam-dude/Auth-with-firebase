@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useUserAuth } from "../context/UserAuthContext";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 const ResetPassword = () => {
     const { resetPassword } = useUserAuth();
     const [email, setEmail] = useState('');
@@ -11,7 +12,7 @@ const ResetPassword = () => {
 
         try{
             await resetPassword(email);
-            navigate("/");
+            navigate("/login");
         }catch(err){
             setError(err.message)
         }
@@ -29,7 +30,9 @@ const ResetPassword = () => {
                 value={email}
                 onChange={ (e) => setEmail(e.target.value)}
                 />
-                <button type="submit">Get Reset Link</button>
+                <button type="submit" className="b-btn">Get Reset Link</button>
+                <hr />
+                <Link to='/login'>Login</Link>
             </form>
         </div>
     );
