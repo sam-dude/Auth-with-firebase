@@ -30,7 +30,7 @@ const ResetPassword = () => {
                 value={email}
                 onChange={ (e) => setEmail(e.target.value)}
                 />
-                <button type="submit" className="b-btn">Get Reset Link</button>
+                <button type="submit" className="c-btn">Get Reset Link</button>
                 <hr />
                 <Link to='/login'>Login</Link>
             </form>

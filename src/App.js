@@ -7,6 +7,7 @@ import Home from './screen/Home';
 import ProtectedRoute from './components/ProtectedRoute';
 import ResetPassword from './screen/ResetPassword';
 import Board from './screen/Board';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
