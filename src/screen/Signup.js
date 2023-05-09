@@ -105,6 +105,7 @@ const Signup = () => {
                 />
 
                 <button className="b-btn c-btn" onClick={handleSubmit} disabled={!isValidPassword}>Create Account</button>
+                <div className="hr">Or</div>
                 <button type="submit" className="b-btn g-btn" onClick={handleGoogleSignIn} >Continue with Google</button>
             </form>
             <p>Already a user? <Link to='/login'>Login</Link></p>

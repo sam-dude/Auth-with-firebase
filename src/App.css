@@ -146,6 +146,22 @@ form .c-btn:disabled{
     background-color: #fff;
     border: none;
 }
+.hr {
+    display: flex;
+    flex-direction: row;
+  }
+  .hr:before, .hr:after{
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid;
+    margin: auto;
+  }
+  .hr:before {
+    margin-right: 10px
+  }
+  .hr:after {
+    margin-left: 10px
+  }
 @media (max-width: 768px) {
     .Board, .signup, .Login{
         flex-direction: column;
